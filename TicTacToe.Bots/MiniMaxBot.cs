@@ -78,7 +78,7 @@ namespace TicTacToe.Bots
             depth++;
             var nextAvailableMoves = state.Board.AvailablePositions;
             var scores = new int[nextAvailableMoves.Count];
-            
+            if (depth<4)
             for (var i = 0; i < nextAvailableMoves.Count; i++)
             {
                 var score = GetMinMaxScoreForMovesRecursive(myNumber, nextAvailableMoves[i], state.Clone(), depth);

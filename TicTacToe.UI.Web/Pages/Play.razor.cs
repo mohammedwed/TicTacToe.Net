@@ -85,7 +85,8 @@ namespace TicTacToe.UI.Web.Pages
             if (botName.Equals(PlayerTypes.MiniMax.ToString(), StringComparison.OrdinalIgnoreCase))
             {
                 _botName = "MiniMax Bot";
-                botPlayer = new WebMiniMaxBot(_httpClient, SetOnlineState);
+                //botPlayer = new WebMiniMaxBot(_httpClient, SetOnlineState);
+                botPlayer = new MiniMaxBot();
             }
             else if (botName.StartsWith(PlayerTypes.QLearning.ToString(), StringComparison.OrdinalIgnoreCase))
             {

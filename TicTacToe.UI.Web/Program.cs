@@ -16,6 +16,7 @@ namespace TicTacToe.UI.Web
             builder.RootComponents.Add<App>("#app");
 
             var functionUrl = builder.Configuration["FunctionUrl"];
+            Console.WriteLine(functionUrl);
             if (functionUrl == null)
             {
                 throw new InvalidOperationException(functionUrl);
